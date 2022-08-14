@@ -4,7 +4,7 @@
 #
 Name     : pypi-ovirt_imageio
 Version  : 2.4.6
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/f3/71/7952dc960510624ec69d166130149af324496027dd2b5dece3caaa8aa2e5/ovirt-imageio-2.4.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f3/71/7952dc960510624ec69d166130149af324496027dd2b5dece3caaa8aa2e5/ovirt-imageio-2.4.6.tar.gz
 Summary  : Transfer disk images on oVirt system
