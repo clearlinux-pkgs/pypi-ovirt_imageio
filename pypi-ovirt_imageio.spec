@@ -4,7 +4,7 @@
 #
 Name     : pypi-ovirt_imageio
 Version  : 2.4.7
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/99/af/040f5288e0643e53a618c8068a53347be44fbd698909b6513aa09aceaee0/ovirt-imageio-2.4.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/99/af/040f5288e0643e53a618c8068a53347be44fbd698909b6513aa09aceaee0/ovirt-imageio-2.4.7.tar.gz
 Summary  : Transfer disk images on oVirt system
