@@ -5,15 +5,13 @@
 #
 Name     : pypi-ovirt_imageio
 Version  : 2.5.0
-Release  : 12
+Release  : 13
 URL      : https://files.pythonhosted.org/packages/54/95/68cf02e80d12ffe65d5135eef1f731f41da23f4d4efebb2c80ca9b309b73/ovirt-imageio-2.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/54/95/68cf02e80d12ffe65d5135eef1f731f41da23f4d4efebb2c80ca9b309b73/ovirt-imageio-2.5.0.tar.gz
 Summary  : Transfer disk images on oVirt system
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
 Requires: pypi-ovirt_imageio-bin = %{version}-%{release}
-Requires: pypi-ovirt_imageio-filemap = %{version}-%{release}
-Requires: pypi-ovirt_imageio-lib = %{version}-%{release}
 Requires: pypi-ovirt_imageio-license = %{version}-%{release}
 Requires: pypi-ovirt_imageio-python = %{version}-%{release}
 Requires: pypi-ovirt_imageio-python3 = %{version}-%{release}
@@ -55,28 +53,9 @@ BuildRequires : pypi-virtualenv
 Summary: bin components for the pypi-ovirt_imageio package.
 Group: Binaries
 Requires: pypi-ovirt_imageio-license = %{version}-%{release}
-Requires: pypi-ovirt_imageio-filemap = %{version}-%{release}
 
 %description bin
 bin components for the pypi-ovirt_imageio package.
-
-
-%package filemap
-Summary: filemap components for the pypi-ovirt_imageio package.
-Group: Default
-
-%description filemap
-filemap components for the pypi-ovirt_imageio package.
-
-
-%package lib
-Summary: lib components for the pypi-ovirt_imageio package.
-Group: Libraries
-Requires: pypi-ovirt_imageio-license = %{version}-%{release}
-Requires: pypi-ovirt_imageio-filemap = %{version}-%{release}
-
-%description lib
-lib components for the pypi-ovirt_imageio package.
 
 
 %package license
@@ -99,7 +78,6 @@ python components for the pypi-ovirt_imageio package.
 %package python3
 Summary: python3 components for the pypi-ovirt_imageio package.
 Group: Default
-Requires: pypi-ovirt_imageio-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(ovirt_imageio)
 
@@ -119,15 +97,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680187549
+export SOURCE_DATE_EPOCH=1683042413
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -168,14 +146,6 @@ popd
 /usr/bin/ovirt-imageioctl
 /usr/bin/ovirt-img
 
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pypi-ovirt_imageio
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
-
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-ovirt_imageio/3cb34cfc72e87654683f2894299adf912d14b284
@@ -185,4 +155,5 @@ popd
 
 %files python3
 %defattr(-,root,root,-)
+/V3/usr/lib/python3*/*
 /usr/lib/python3*/*
