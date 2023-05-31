@@ -5,7 +5,7 @@
 #
 Name     : pypi-ovirt_imageio
 Version  : 2.5.0
-Release  : 13
+Release  : 14
 URL      : https://files.pythonhosted.org/packages/54/95/68cf02e80d12ffe65d5135eef1f731f41da23f4d4efebb2c80ca9b309b73/ovirt-imageio-2.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/54/95/68cf02e80d12ffe65d5135eef1f731f41da23f4d4efebb2c80ca9b309b73/ovirt-imageio-2.5.0.tar.gz
 Summary  : Transfer disk images on oVirt system
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683042413
+export SOURCE_DATE_EPOCH=1685552483
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
