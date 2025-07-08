@@ -1,5 +1,5 @@
 PKG_NAME := pypi-ovirt_imageio
-URL = https://files.pythonhosted.org/packages/54/95/68cf02e80d12ffe65d5135eef1f731f41da23f4d4efebb2c80ca9b309b73/ovirt-imageio-2.5.0.tar.gz
+URL = https://files.pythonhosted.org/packages/93/f0/e13f4f6d7722ef41f06687d199780ef7c9a52fa860f32351f12eb98a35e9/ovirt_imageio-2.5.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
